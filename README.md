@@ -1,16 +1,163 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**Rudra130/Rudra130** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<!-- Animated Header Banner -->
+<a href="https://github.com/Rudra130">
+  <img src="https://raw.githubusercontent.com/Rudra130/agentic-ai/master/assets/profile-banner.svg" alt="Rudra Tiwari Profile Banner" width="100%" />
+</a>
 
-Here are some ideas to get you started:
+<br/><br/>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<!-- Animated Typing Subheader -->
+<a href="https://github.com/Rudra130">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2800&pause=1000&color=38BDF8&center=true&vCenter=true&width=680&lines=Software+Engineer+%7C+Java+%26+Spring+Boot+Microservices;Agentic+AI+%26+LangGraph+Orchestrator;OAuth+2.0%2C+SSO+%26+Biometric+Security+Architect;LeetCode+Rating+1812+%7C+600%2B+Problems+Solved" alt="Typing SVG" />
+</a>
+
+<br/>
+
+<!-- Profile Social Badges -->
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rudra130)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rudra.tiwari.4141@gmail.com)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com)
+
+</div>
+
+---
+
+### 🚀 About Me
+
+I am a **Software Engineer** specializing in **Java, Spring Boot, microservices architecture, and Agentic AI**. With hands-on experience building enterprise-grade authentication, onboarding, loyalty, and AI-enabled observability systems, I focus on building distributed backend solutions that scale with resilience, strict security, and high performance.
+
+- 💼 **Software Engineer at [Salescode AI](https://salescode.ai)** (Oct 2025 – Sept 2026):
+  - Engineered production Java/Spring Boot microservices and REST APIs for authentication, onboarding, and secure service-to-service communication.
+  - Implemented **OAuth 2.0 & SSO** with token issuance, refresh/revocation, and session validation across **10 services**.
+  - Built an **Authentication Configuration Portal** adopted by 10 LOBs, enabling zero-downtime self-service config of login/password policies and OTP providers.
+  - Designed and deployed a custom **cryptographic biometric authentication system** (RSA & ECDSA) featuring two-phase challenge-response, device binding, and TTL-based intent validation.
+  - Architected **OpenTelemetry distributed tracing and structured logging** across 7 enterprise clients, cutting onboarding time down to ~2 hours.
+- 🧠 **AI & Agentic Systems**: Building autonomous, tool-calling agents with **Spring AI**, **LangGraph**, **LangChain**, and **FastMCP (Model Context Protocol)**.
+- 🏆 **Problem Solving & DSA**: **LeetCode Rating: 1812** | **600+ problems solved on LeetCode** | **1,200+ problems** across competitive programming platforms.
+- 🎓 **Education**: B.Tech in Computer Science & Engineering from **ABES Engineering College** (CGPA: 8.02/10).
+- 🏅 **Honors**: Recipient of the prestigious **National Means-cum-Merit Scholarship**.
+
+---
+
+### 🛠️ Technical Arsenal
+
+<div align="center">
+
+| Domain | Technologies & Frameworks |
+| :--- | :--- |
+| **Languages** | ![Java](https://img.shields.io/badge/Java_17+-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
+| **Backend & Microservices** | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square&logo=spring&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) |
+| **AI, GenAI & Agents** | ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=diagram-next&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=chainlink&logoColor=white) ![FastMCP](https://img.shields.io/badge/FastMCP-8A2BE2?style=flat-square&logo=anthropic&logoColor=white) ![LLMs](https://img.shields.io/badge/LLMs-Nemotron_|_Gemini-76B900?style=flat-square&logo=nvidia&logoColor=white) ![Prompt Eng](https://img.shields.io/badge/Prompt_Engineering-blueviolet?style=flat-square) |
+| **Databases & Caching** | ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) |
+| **Observability & Security** | ![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-F5A800?style=flat-square&logo=opentelemetry&logoColor=white) ![Distributed Tracing](https://img.shields.io/badge/Distributed_Tracing-4B5563?style=flat-square) ![OAuth 2.0](https://img.shields.io/badge/OAuth_2.0_|_SSO-2563EB?style=flat-square) ![Biometrics](https://img.shields.io/badge/RSA_|_ECDSA_Crypto-10B981?style=flat-square) |
+| **DevOps & Cloud** | ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white) ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![CI/CD](https://img.shields.io/badge/CI/CD_Pipelines-2088FF?style=flat-square) |
+
+</div>
+
+---
+
+### 🌟 Featured Projects
+
+<div align="center">
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">🤖 AI-Powered Log Investigation System</h3>
+      <p align="center">
+        <b>Java • Spring Boot • Spring AI • LangGraph • SQL Security Proxy</b>
+      </p>
+      <ul>
+        <li>Developed an enterprise AI diagnostic engine enabling engineers to analyze production error logs through natural-language queries.</li>
+        <li>Implemented a controlled read-only log pipeline providing contextual traces to LLMs for root-cause failure analysis.</li>
+        <li>Enforced a strict <b>SQL security proxy layer</b> restricting AI database execution strictly to <code>SELECT</code> queries.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">⚡ Agentic AI Ecosystem</h3>
+      <p align="center">
+        <b>LangGraph • FastMCP • LangChain 1.4 • NVIDIA Nemotron 120B • uv</b>
+      </p>
+      <ul>
+        <li>Orchestrated stateful cyclic agent graphs with <code>MemorySaver</code> checkpointing and dynamic tool routing.</li>
+        <li>Architected a multi-transport <b>Model Context Protocol (FastMCP)</b> gateway connecting <code>stdio</code> subprocesses and <code>streamable-http</code> servers concurrently.</li>
+        <li>Built production middleware for PII masking, token telemetry, guardrails, and Pydantic validation.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">🎟️ BarterNow: AI Sponsorship Platform</h3>
+      <p align="center">
+        <b>Python • FastAPI • React • Express.js • Prisma • Razorpay</b>
+      </p>
+      <ul>
+        <li>Two-sided marketplace connecting brands with event organizers using an AI-driven demographic recommendation engine.</li>
+        <li>Engineered reliable payment settlement with <b>idempotent webhook handling</b> via Razorpay and real-time ROI analytics.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">🔐 Biometric & Multi-Device Auth Engine</h3>
+      <p align="center">
+        <b>Java • Spring Boot • OAuth 2.0 • RSA & ECDSA • Redis</b>
+      </p>
+      <ul>
+        <li>Cryptographic challenge-response biometric flow with single-use intents, device binding, and TTL-based expiry across 15 typed error states.</li>
+        <li>Multi-device concurrent session management with granular device-level token revocation.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+---
+
+### 📜 Certifications & Honors
+
+- 🏅 **Oracle Certified Agentic AI Foundations Associate**
+- 🏅 **Oracle Cloud Infrastructure (OCI) Certified Generative AI Professional**
+- 🏆 **LeetCode Rating: 1812** — Solved 600+ LeetCode problems & 1,200+ CP problems across platforms.
+- 🎓 **National Means-cum-Merit Scholarship** recipient for academic excellence.
+
+---
+
+### 📊 GitHub & Coding Activity
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=Rudra130&show_icons=true&theme=tokyonight&hide_border=true&bg_color=090d16&title_color=38bdf8&text_color=94a3b8&icon_color=818cf8" height="165" alt="GitHub Stats" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rudra130&layout=compact&theme=tokyonight&hide_border=true&bg_color=090d16&title_color=38bdf8&text_color=94a3b8" height="165" alt="Top Languages" />
+
+<br/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Rudra130&theme=tokyonight&hide_border=true&background=090D16&ring=38BDF8&fire=F43F5E&currStreakLabel=38BDF8" alt="GitHub Streak" />
+
+</div>
+
+---
+
+### 📬 Connect With Me
+
+<div align="center">
+
+<a href="mailto:rudra.tiwari.4141@gmail.com">
+  <img src="https://img.shields.io/badge/Email-rudra.tiwari.4141%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</a>
+&nbsp;
+<a href="https://linkedin.com">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+&nbsp;
+<a href="https://github.com/Rudra130">
+  <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+
+<br/><br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24&height=90&section=footer" width="100%" />
+
+</div>
+
