@@ -2,7 +2,7 @@
 
 <!-- Animated Header Banner -->
 <a href="https://github.com/Rudra130">
-  <img src="https://raw.githubusercontent.com/Rudra130/agentic-ai/master/assets/profile-banner.svg" alt="Rudra Tiwari Profile Banner" width="100%" />
+  <img src="./profile-banner.svg" alt="Rudra Tiwari Profile Banner" width="100%" />
 </a>
 
 <br/><br/>
@@ -49,9 +49,9 @@ I am a **Software Engineer** specializing in **Java, Spring Boot, microservices 
 | :--- | :--- |
 | **Languages** | ![Java](https://img.shields.io/badge/Java_17+-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
 | **Backend & Microservices** | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square&logo=spring&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) |
-| **AI, GenAI & Agents** | ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=diagram-next&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=chainlink&logoColor=white) ![FastMCP](https://img.shields.io/badge/FastMCP-8A2BE2?style=flat-square&logo=anthropic&logoColor=white) ![LLMs](https://img.shields.io/badge/LLMs-Nemotron_|_Gemini-76B900?style=flat-square&logo=nvidia&logoColor=white) ![Prompt Eng](https://img.shields.io/badge/Prompt_Engineering-blueviolet?style=flat-square) |
+| **AI, GenAI & Agents** | ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=diagram-next&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=chainlink&logoColor=white) ![FastMCP](https://img.shields.io/badge/FastMCP-8A2BE2?style=flat-square&logo=anthropic&logoColor=white) ![Prompt Eng](https://img.shields.io/badge/Prompt_Engineering-blueviolet?style=flat-square) |
 | **Databases & Caching** | ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) |
-| **Observability & Security** | ![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-F5A800?style=flat-square&logo=opentelemetry&logoColor=white) ![Distributed Tracing](https://img.shields.io/badge/Distributed_Tracing-4B5563?style=flat-square) ![OAuth 2.0](https://img.shields.io/badge/OAuth_2.0_|_SSO-2563EB?style=flat-square) ![Biometrics](https://img.shields.io/badge/RSA_|_ECDSA_Crypto-10B981?style=flat-square) |
+| **Observability & Security** | ![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-F5A800?style=flat-square&logo=opentelemetry&logoColor=white) ![Distributed Tracing](https://img.shields.io/badge/Distributed_Tracing-4B5563?style=flat-square) ![Biometrics](https://img.shields.io/badge/RSA_|_ECDSA_Crypto-10B981?style=flat-square) |
 | **DevOps & Cloud** | ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white) ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![CI/CD](https://img.shields.io/badge/CI/CD_Pipelines-2088FF?style=flat-square) |
 
 </div>
@@ -121,21 +121,6 @@ I am a **Software Engineer** specializing in **Java, Spring Boot, microservices 
 - 🏅 **Oracle Cloud Infrastructure (OCI) Certified Generative AI Professional**
 - 🏆 **LeetCode Rating: 1812** — Solved 600+ LeetCode problems & 1,200+ CP problems across platforms.
 - 🎓 **National Means-cum-Merit Scholarship** recipient for academic excellence.
-
----
-
-### 📊 GitHub & Coding Activity
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Rudra130&show_icons=true&theme=tokyonight&hide_border=true&bg_color=090d16&title_color=38bdf8&text_color=94a3b8&icon_color=818cf8" height="165" alt="GitHub Stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rudra130&layout=compact&theme=tokyonight&hide_border=true&bg_color=090d16&title_color=38bdf8&text_color=94a3b8" height="165" alt="Top Languages" />
-
-<br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Rudra130&theme=tokyonight&hide_border=true&background=090D16&ring=38BDF8&fire=F43F5E&currStreakLabel=38BDF8" alt="GitHub Streak" />
-
-</div>
 
 ---
 
