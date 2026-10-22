@@ -98,8 +98,8 @@ I am a **Software Engineer** specializing in **Java, Spring Boot, microservices 
       </details>
       <br/>
       <div align="center">
-        <a href="#ai-log-investigation">
-          <img src="https://img.shields.io/badge/View_Architecture_Flow-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Architecture" />
+        <a href="https://github.com/Rudra130">
+          <img src="https://img.shields.io/badge/View_Architecture-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Architecture" />
         </a>
       </div>
     </td>
@@ -131,8 +131,8 @@ I am a **Software Engineer** specializing in **Java, Spring Boot, microservices 
       </details>
       <br/>
       <div align="center">
-        <a href="#langgraph-agents">
-          <img src="https://img.shields.io/badge/View_Agent_Graph-181717?style=for-the-badge&logo=github&logoColor=white" alt="Explore Ecosystem" />
+        <a href="https://github.com/Rudra130">
+          <img src="https://img.shields.io/badge/Explore_Ecosystem-181717?style=for-the-badge&logo=github&logoColor=white" alt="Explore Ecosystem" />
         </a>
       </div>
     </td>
@@ -165,8 +165,8 @@ I am a **Software Engineer** specializing in **Java, Spring Boot, microservices 
       </details>
       <br/>
       <div align="center">
-        <a href="#barternow-settlement">
-          <img src="https://img.shields.io/badge/View_Settlement_Flow-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Platform" />
+        <a href="https://github.com/Rudra130">
+          <img src="https://img.shields.io/badge/View_Platform-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Platform" />
         </a>
       </div>
     </td>
@@ -197,7 +197,7 @@ I am a **Software Engineer** specializing in **Java, Spring Boot, microservices 
       </details>
       <br/>
       <div align="center">
-        <a href="#biometric-auth-engine">
+        <a href="https://github.com/Rudra130">
           <img src="https://img.shields.io/badge/View_Security_Spec-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Security Spec" />
         </a>
       </div>
@@ -206,253 +206,6 @@ I am a **Software Engineer** specializing in **Java, Spring Boot, microservices 
 </table>
 
 </div>
-
----
-
-### 🏗️ Deep-Dive Architecture & System Flows
-
-<div align="center">
-  <p>Production architectural blueprints detailing end-to-end data pipelines, state machines, and cryptographic protocols.</p>
-</div>
-
-<br/>
-
-<a id="ai-log-investigation"></a>
-#### 🤖 1. AI-Powered Production Log Investigation Engine
-> **Enterprise Problem**: Diagnosing multi-service production outages across distributed logs and traces typically requires hours of manual grep, log querying, and correlation across siloed tools.  
-> **Engineered Solution**: An autonomous diagnostic pipeline combining a **Spring AI AST query validator**, an enforced **read-only SQL proxy**, and a **LangGraph root-cause synthesis agent** with confidence-based iterative retrieval.
-
-```mermaid
-flowchart TD
-    subgraph Ingress["🖥️ Ingress & Client Interface"]
-        User["👨‍💻 SRE / Software Engineer"] -->|"Natural Language Query\n('Investigate 504 Gateway Timeouts')"| API["🌐 API Gateway / CLI Ingress"]
-    end
-
-    subgraph Security["🛡️ Spring AI AST & Security Validation Layer"]
-        API -->|"User Prompt"| PromptEngine["⚙️ Prompt Sanitizer & Intent Extractor"]
-        PromptEngine -->|"Generated SQL / Query"| ASTValidator["🔍 JSqlParser AST Validator"]
-        ASTValidator -->|"❌ Prohibited (INSERT, UPDATE, DELETE, DROP, ALTER)"| BlockAlert["⛔ 403 Forbidden\nSecurity Audit Log Triggered"]
-        ASTValidator -->|"✅ Validated SELECT Only"| SQLProxy["🔒 Read-Only SQL Proxy Layer"]
-    end
-
-    subgraph Telemetry["🗄️ Enterprise Observability & Log Infrastructure"]
-        SQLProxy -->|"Bounded Time-Range Query"| LogStore[("📊 Elasticsearch / ClickHouse\nProduction Error Logs")]
-        SQLProxy -->|"Trace & Span Lookup"| OTelCollector[("⏱️ OpenTelemetry Distributed Tracing\nSpans, Latencies & Service Map")]
-    end
-
-    subgraph LangGraphEngine["🧠 LangGraph Root-Cause Diagnostic Engine"]
-        LogStore -->|"Log Event Batches"| ChunkNode["📦 Context Chunking & Token Windowing"]
-        OTelCollector -->|"Trace Graphs & Spans"| ChunkNode
-        
-        ChunkNode --> AnomalyNode["⚡ Anomaly Detection & Error Clustering"]
-        AnomalyNode --> CorrelationNode["🔗 Trace Correlation Engine\n(Map Spans across 10 Microservices)"]
-        CorrelationNode --> HypothesisNode{"🧪 Root-Cause Hypothesis Evaluator"}
-        
-        HypothesisNode -->|"Low Confidence (<85%)"| RefineNode["🔄 Expand Context Window & Refetch"]
-        RefineNode --> SQLProxy
-        HypothesisNode -->|"High Confidence (≥85%)"| SynthesisNode["📝 Actionable RCA Generator"]
-    end
-
-    subgraph Output["🚀 Resolution & Developer Delivery"]
-        SynthesisNode --> Report["📋 Comprehensive Diagnostic Summary\n• Root Cause Analysis\n• Culprit Stack Trace & Correlated Span ID\n• Recommended Fix & PR Patch Link"]
-        Report --> User
-    end
-
-    classDef client fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
-    classDef security fill:#1e1b4b,stroke:#818cf8,stroke-width:1.5px,color:#f8fafc;
-    classDef telemetry fill:#064e3b,stroke:#10b981,stroke-width:1.5px,color:#f8fafc;
-    classDef agent fill:#3b0764,stroke:#c084fc,stroke-width:1.5px,color:#f8fafc;
-    classDef output fill:#1e293b,stroke:#06b6d4,stroke-width:1.5px,color:#f8fafc;
-    classDef reject fill:#450a0a,stroke:#ef4444,stroke-width:1.5px,color:#f8fafc;
-
-    class User,API client;
-    class PromptEngine,ASTValidator,SQLProxy security;
-    class LogStore,OTelCollector telemetry;
-    class ChunkNode,AnomalyNode,CorrelationNode,HypothesisNode,RefineNode,SynthesisNode agent;
-    class Report output;
-    class BlockAlert reject;
-```
-
-<table>
-  <tr>
-    <td width="33%"><b>🔒 Zero-Risk Read-Only Proxy</b><br/>Enforces strict <code>SELECT</code> queries via JSqlParser AST analysis; immediately terminates and audits any data mutation attempts.</td>
-    <td width="33%"><b>🔗 OpenTelemetry Span Correlation</b><br/>Unifies unstructured stack traces with distributed trace contexts across 10 microservices to isolate upstream cascade failures.</td>
-    <td width="33%"><b>🧪 Cyclic Hypothesis Loop</b><br/>Evaluates diagnosis confidence: triggers secondary targeted log fetches if under 85% before presenting actionable remediation.</td>
-  </tr>
-</table>
-
-<br/>
-
-<a id="langgraph-agents"></a>
-#### ⚡ 2. Autonomous Agentic AI Ecosystem (FastMCP & LangGraph)
-> **Enterprise Problem**: Monolithic LLM wrappers struggle with non-deterministic execution, lack state persistence across multi-turn sessions, and risk leaking sensitive data (PII/secrets) to models.  
-> **Engineered Solution**: A decoupled **Model Context Protocol (FastMCP)** gateway supporting both `stdio` and `streamable-http` transports with inline privacy filters, powering a cyclic **LangGraph** orchestrator with **MemorySaver** checkpointing and Human-in-the-Loop governance.
-
-```mermaid
-flowchart TD
-    subgraph Transports["🌐 Multi-Transport FastMCP Client Layer"]
-        StdioClient["💻 IDE / CLI Subprocess\n(stdio Transport)"]
-        HttpClient["🌍 Web & Microservices Client\n(streamable-http / SSE Transport)"]
-    end
-
-    subgraph FastMCPGateway["⚡ FastMCP Gateway & Production Guardrails"]
-        StdioClient -->|"JSON-RPC 2.0"| ProtocolAdapter["🔌 FastMCP Transport Adapter"]
-        HttpClient -->|"SSE Streams"| ProtocolAdapter
-        ProtocolAdapter --> PIIMasking["🛡️ PII Masking & Privacy Middleware\n(Redact Tokens, Passwords & Credentials)"]
-        PIIMasking --> TelemetryQuota["📊 Token Telemetry & Rate Limiting"]
-        TelemetryQuota --> SchemaValidator["✅ Pydantic Type & Schema Validator"]
-    end
-
-    subgraph LangGraphCore["🧠 Stateful Cyclic LangGraph Orchestrator"]
-        SchemaValidator --> Supervisor["🎯 Supervisor / Planning Node\n(Stateful Graph Entry)"]
-        Supervisor --> Router{"🔀 Dynamic Tool Router"}
-
-        Router -->|"Query Observability"| ToolObservability["📈 Prometheus & Loki MCP Server"]
-        Router -->|"Query Relational State"| ToolDatabase["🗄️ PostgreSQL & Redis MCP Server"]
-        Router -->|"Inspect Cloud / CI"| ToolDevOps["⚙️ Kubernetes & GitHub MCP Server"]
-
-        ToolObservability --> Aggregator["📥 Tool Result Aggregator Node"]
-        ToolDatabase --> Aggregator
-        ToolDevOps --> Aggregator
-
-        Aggregator --> StateCheck{"📊 Goal Criteria Satisfied?"}
-        StateCheck -->|"Iterative Step Needed"| Supervisor
-        StateCheck -->|"Critical / Mutating Action"| HITL{"🧑‍💼 Human-in-the-Loop Approval"}
-        
-        HITL -->|"Rejected"| Supervisor
-        HITL -->|"Approved"| ResponseSynthesis["✨ Output Synthesis Node"]
-        StateCheck -->|"Goal Achieved"| ResponseSynthesis
-
-        Checkpointer[("💾 MemorySaver Checkpointer\n(Thread State, Rollbacks & Time-Travel)")] <-->|"Persist / Hydrate State"| Supervisor
-    end
-
-    subgraph Delivery["🚀 Real-Time Client Delivery"]
-        ResponseSynthesis -->|"Token-by-Token Streaming"| StreamSink["📲 Streamed Response to Client"]
-    end
-
-    classDef transport fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
-    classDef gateway fill:#1e1b4b,stroke:#818cf8,stroke-width:1.5px,color:#f8fafc;
-    classDef agent fill:#3b0764,stroke:#c084fc,stroke-width:1.5px,color:#f8fafc;
-    classDef tools fill:#064e3b,stroke:#10b981,stroke-width:1.5px,color:#f8fafc;
-    classDef memory fill:#1e293b,stroke:#f59e0b,stroke-width:1.5px,color:#f8fafc;
-    classDef stream fill:#0c4a6e,stroke:#0284c7,stroke-width:1.5px,color:#f8fafc;
-
-    class StdioClient,HttpClient transport;
-    class ProtocolAdapter,PIIMasking,TelemetryQuota,SchemaValidator gateway;
-    class Supervisor,Router,Aggregator,StateCheck,HITL,ResponseSynthesis agent;
-    class ToolObservability,ToolDatabase,ToolDevOps tools;
-    class Checkpointer memory;
-    class StreamSink stream;
-```
-
-<table>
-  <tr>
-    <td width="33%"><b>🔌 Dual Transport Gateway</b><br/>Concurrently serves local CLI subagents (stdio) and remote web microservices (streamable-http/SSE) through normalized MCP JSON-RPC.</td>
-    <td width="33%"><b>💾 MemorySaver Checkpointing</b><br/>Preserves serialized agent state at every node transition, enabling thread-based state resumption and zero-loss error rollbacks.</td>
-    <td width="33%"><b>🧑‍💼 Human-in-the-Loop (HITL)</b><br/>Halts agent graph execution on high-impact tools (e.g. database migration or cluster restart) pending human confirmation.</td>
-  </tr>
-</table>
-
-<br/>
-
-<a id="biometric-auth-engine"></a>
-#### 🔐 3. Zero-Trust Biometric & Multi-Device Auth Engine
-> **Enterprise Problem**: Password-based and SMS OTP authentication are prone to SIM swapping, replay attacks, and token interception, while monolithic session storage fails under multi-device concurrency.  
-> **Engineered Solution**: A **hardware-bound cryptographic challenge-response authentication engine** using **RSA & ECDSA (secp256r1)**, single-use Redis nonces with TTL expiration, atomic `GETDEL` replay prevention, and multi-device session management.
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Client as 📱 Mobile Client / Secure Enclave
-    participant Gateway as 🚪 Spring Boot API Gateway
-    participant AuthEngine as 🔐 Auth Engine (Java 17)
-    participant Redis as ⚡ Redis Cluster (TTL Sessions)
-    participant DB as 🗄️ PostgreSQL (Device Registry)
-
-    Note over Client,Redis: Phase 1: Cryptographic Challenge Initiation
-    Client->>Gateway: POST /api/v1/auth/biometric/challenge {userId, deviceId}
-    Gateway->>AuthEngine: Forward Request
-    AuthEngine->>AuthEngine: Generate Cryptographic Nonce (256-bit SecureRandom)
-    AuthEngine->>Redis: SETEX auth:challenge:{nonce} 60s {userId, deviceId, intentId}
-    AuthEngine-->>Client: 200 OK {nonce, intentId, expiresIn: 60}
-
-    Note over Client: Phase 2: Hardware-Bound Signature Generation
-    Client->>Client: Biometric Prompt (TouchID / FaceID)
-    Client->>Client: Secure Enclave unlocks private key (ECDSA secp256r1)
-    Client->>Client: Sign SHA256(nonce + intentId + timestamp + deviceFingerprint)
-
-    Note over Client,DB: Phase 3: Verification & Anti-Replay Engine
-    Client->>Gateway: POST /api/v1/auth/biometric/verify {nonce, intentId, signature, timestamp}
-    Gateway->>AuthEngine: Route Verification Request
-    AuthEngine->>Redis: GETDEL auth:challenge:{nonce} (Atomic Check & Invalidation)
-    alt Nonce Missing or Expired (>60s)
-        AuthEngine-->>Client: 401 Unauthorized [ERR_AUTH_NONCE_EXPIRED_OR_REPLAYED]
-    else Nonce Valid
-        AuthEngine->>DB: Query Registered Public Key for deviceId
-        AuthEngine->>AuthEngine: Verify ECDSA Signature with Public Key
-        AuthEngine->>AuthEngine: Validate Clock Drift (timestamp within ±10s)
-        AuthEngine->>AuthEngine: Assert Device Binding & Intent Integrity
-    end
-
-    Note over AuthEngine,Client: Phase 4: Token Issuance & Multi-Device Session
-    AuthEngine->>AuthEngine: Mint Asymmetric RS256 Access Token (15m TTL)
-    AuthEngine->>AuthEngine: Mint Opaque Refresh Token (7d TTL)
-    AuthEngine->>Redis: HSET user:{userId}:devices {deviceId: sessionMetadata}
-    AuthEngine-->>Client: 200 OK {accessToken, refreshToken, deviceSessionId}
-```
-
-<table>
-  <tr>
-    <td width="33%"><b>🔑 Hardware-Bound Security</b><br/>Private keys never leave the device's Secure Enclave / Android StrongBox; signatures prove physical hardware possession.</td>
-    <td width="33%"><b>⚡ Atomic Anti-Replay Defense</b><br/>Redis <code>GETDEL</code> ensures nonces are single-use and invalid immediately upon lookup, stopping replay attacks cold.</td>
-    <td width="33%"><b>📱 Multi-Device Concurrent Sessions</b><br/>Maintains independent token lifecycles per device; enables users to remotely revoke compromised devices without logging out of others.</td>
-  </tr>
-</table>
-
-<br/>
-
-<a id="barternow-settlement"></a>
-#### 🎟️ 4. BarterNow: AI Sponsorship & Idempotent Settlement Engine
-> **Enterprise Problem**: Webhook network retries and asynchronous payment events often result in duplicate ledger credits or race conditions in two-sided sponsorship deals.  
-> **Engineered Solution**: An **idempotent settlement pipeline** utilizing Razorpay webhook cryptographic signature verification, atomic Redis idempotency locks, and transactional database ledger entries.
-
-```mermaid
-flowchart LR
-    Event["🎪 Event Demographics\n& Pitch Details"] --> RecEngine["🤖 AI Demographic\nRecommendation Engine"]
-    RecEngine --> BrandMatch["🏢 Brand Match &\nProposal Generation"]
-    BrandMatch --> PaymentGateway["💳 Razorpay Payment Gateway"]
-    PaymentGateway -->|"POST Webhook (HMAC Signature)"| WebhookConsumer["⚡ FastWebHook Ingestion Service"]
-    
-    WebhookConsumer --> VerifySig{"🔐 Verify HMAC-SHA256\nSignature"}
-    VerifySig -->|"Invalid Signature"| Reject["⛔ 400 Bad Request\nDrop Payload"]
-    VerifySig -->|"Valid"| IdempotencyCheck{"🔑 Atomic Redis Key\nSET payment:id NX EX 86400"}
-    
-    IdempotencyCheck -->|"Key Exists (Duplicate)"| Ack["✅ 200 OK (Duplicate Ignored)"]
-    IdempotencyCheck -->|"Lock Acquired (New)"| DBTransaction["🗄️ PostgreSQL ACID Transaction\n• Update Deal Status\n• Credit Organizer Escrow\n• Log Immutable Audit Entry"]
-    
-    DBTransaction --> Analytics["📊 Real-Time Sponsorship\nROI Analytics Dashboard"]
-    DBTransaction --> AckFinal["✅ 200 OK Receipt"]
-
-    classDef input fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
-    classDef processing fill:#1e1b4b,stroke:#818cf8,stroke-width:1.5px,color:#f8fafc;
-    classDef security fill:#3b0764,stroke:#c084fc,stroke-width:1.5px,color:#f8fafc;
-    classDef db fill:#064e3b,stroke:#10b981,stroke-width:1.5px,color:#f8fafc;
-    classDef reject fill:#450a0a,stroke:#ef4444,stroke-width:1.5px,color:#f8fafc;
-
-    class Event,BrandMatch,PaymentGateway input;
-    class RecEngine,WebhookConsumer,Analytics processing;
-    class VerifySig,IdempotencyCheck security;
-    class DBTransaction,Ack,AckFinal db;
-    class Reject reject;
-```
-
-<table>
-  <tr>
-    <td width="33%"><b>🤖 Demographic Matchmaking</b><br/>Vectorized semantic matching aligns sponsor target audience personas directly with attendee demographic profiles.</td>
-    <td width="33%"><b>🛡️ HMAC Signature Verification</b><br/>Cryptographically validates Razorpay webhook payloads before executing any business logic.</td>
-    <td width="33%"><b>⚡ Atomic Idempotency Locks</b><br/>Redis <code>SET NX EX</code> prevents duplicate payouts or ledger inaccuracies caused by gateway retries or network drops.</td>
-  </tr>
-</table>
 
 ---
 
